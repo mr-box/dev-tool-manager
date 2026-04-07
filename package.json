@@ -1,0 +1,38 @@
+{
+  "name": "dev-tool-manager",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "type": "module",
+  "description": "Local macOS development tool manager",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsx scripts/dev.ts",
+    "dev:server": "tsx watch server/index.ts",
+    "dev:client": "vite",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "build": "tsc --noEmit && vite build",
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@fastify/cors": "^10.0.1",
+    "fastify": "^5.1.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.6",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vite": "^5.4.11"
+  },
+  "packageManager": "npm@10.9.0"
+}

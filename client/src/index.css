@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-a: #fff8e8;
+  --bg-b: #e0f2fe;
+  --text: #0f172a;
+  --card: rgba(255, 255, 255, 0.82);
+  --line: rgba(15, 23, 42, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  font-family: "Space Grotesk", sans-serif;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(245, 158, 11, 0.22), transparent 30%),
+    radial-gradient(circle at 88% 18%, rgba(14, 165, 233, 0.2), transparent 34%),
+    linear-gradient(130deg, var(--bg-a), var(--bg-b));
+}
+
+code,
+pre {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.fade-in {
+  animation: fadeInUp 450ms ease-out both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
